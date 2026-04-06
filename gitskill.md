@@ -141,13 +141,13 @@ git push origin v0.1.0-alpha
 ### Description
 
 ```text
-A protocol-driven computational organism prototype with a minimal runtime loop, validator, and log-derived vitals.
+An experimental runtime for computational organisms, where protocols, signals, membranes, and metabolism become executable, verifiable system behavior.
 ```
 
 ### Topics
 
 ```text
-agent-runtime, protocol-driven, computational-organism, artificial-life, runtime-validation, event-driven, yaml, experimental, python
+artificial-life, computational-organism, protocols, event-driven, runtime, python, yaml, experimental, emergence, autonomous-systems
 ```
 
 ### Website
@@ -185,15 +185,9 @@ Being v0.1.0-alpha — first operational prototype
 ```markdown
 # Being v0.1.0-alpha — first operational prototype
 
-Being is an experimental computational organism prototype.
+Being is an experimental runtime for computational organisms.
 
-This release marks the point where the repository becomes more than a conceptual design space:
-
-- it has a protocol layer,
-- a runtime fact layer,
-- a minimal validator,
-- a minimal runtime loop,
-- and log-derived vitals.
+This release marks the point where the repository becomes more than a conceptual design space. It now includes executable runtime behavior, recorded runtime facts, and a minimal validation path.
 
 ## Highlights
 

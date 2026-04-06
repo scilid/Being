@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the roadmap
+    url: https://github.com/scilid/Being/blob/main/ROADMAP.md
+    about: Review the public roadmap before opening broader planning issues.
+  - name: Read the runtime overview
+    url: https://github.com/scilid/Being/blob/main/README.md
+    about: Start with the README if you are new to the repository.
