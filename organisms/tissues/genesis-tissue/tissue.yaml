@@ -1,0 +1,70 @@
+# ============================================================
+#  Genesis Tissue — Being 的第一个组织
+#  生物类比：生殖上皮组织（产生新细胞的组织）
+#  功能：创造、界定、追踪新生命
+# ============================================================
+
+identity:
+  name: "genesis-tissue"
+  description: >-
+    Being 的创世组织——负责创造新 Skill、为其编织膜、追踪代谢。
+    这是 Being 的"干细胞龛"：所有新生命从这里诞生。
+  formed: "2026-04-05"
+  era: 5
+  biological_analogy: "生殖上皮 / 干细胞龛（stem cell niche）"
+
+cells:
+  - skill: "skill-genesis"
+    position: "core-generator"
+    grade: "eukaryote"
+    role: "创造自带膜的新 Skill"
+
+  - skill: "membrane-weaver"
+    position: "boundary-specialist"
+    grade: "prokaryote"
+    role: "独立膜编织（为非 skill-genesis 路径创建的 Skill 服务）"
+    note: "既是 skill-genesis 的内共生体，也保留组织中的独立地位"
+
+  - skill: "metabolic-tracker"
+    position: "metabolism-monitor"
+    grade: "prokaryote"
+    role: "追踪新生 Skill 的代谢基线和持续效率"
+
+collective_membrane:
+  ingress:
+    - name: "creation_request"
+      type: "text"
+      description: "创建新 Skill 的完整需求"
+    - name: "tracking_request"
+      type: "text"
+      description: "对已有 Skill 的代谢追踪请求"
+    - name: "membrane_request"
+      type: "file_path"
+      description: "需要编膜的 Skill 路径"
+
+  egress:
+    - name: "living_skill"
+      type: "file_set"
+      description: "完整的新生 Skill（含 SKILL.md + membrane + 系统发育注册）"
+    - name: "metabolism_report"
+      type: "structured_text"
+      description: "代谢记录或统计报告"
+    - name: "membrane_declaration"
+      type: "structured_text"
+      description: "独立编织的膜声明"
+
+internal_topology:
+  - from: "skill-genesis"
+    to: "metabolic-tracker"
+    junction: "gap"
+    signal: "life-created → metabolic-tracker 记录新 Skill 的首次代谢基线"
+
+  - from: "skill-genesis"
+    to: "membrane-weaver"
+    junction: "tight"
+    note: "内共生关系——membrane-weaver 是 skill-genesis 的线粒体"
+
+  - from: "metabolic-tracker"
+    to: "membrane-weaver"
+    junction: "anchoring"
+    note: "共享 Being 生态的元数据（.being/ 目录）"

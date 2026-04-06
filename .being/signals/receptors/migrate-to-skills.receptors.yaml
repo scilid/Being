@@ -1,0 +1,4 @@
+skill: "migrate-to-skills"
+receptors:
+  - signal: "migrate-request"
+    action: "将外部规则或命令迁移为 Skill"

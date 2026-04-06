@@ -1,0 +1,4 @@
+skill: "update-cursor-settings"
+receptors:
+  - signal: "settings-change-request"
+    action: "修改编辑器运行环境设置"

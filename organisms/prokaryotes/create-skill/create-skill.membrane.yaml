@@ -1,0 +1,64 @@
+# 膜声明 v0.1.0
+# create-skill — 自我复制子
+# 生物类比：能自我复制的原核细胞（Being 生殖系统的种子）
+
+identity:
+  name: "create-skill"
+  origin: "abiogenesis"
+  era: 0
+  source: "~/.cursor/skills-cursor/create-skill/"
+
+ingress:
+  - name: "purpose"
+    type: "text"
+    required: true
+    description: "新 Skill 的目的和主要用例"
+  - name: "storage_scope"
+    type: "text"
+    required: false
+    description: "存储位置：personal (~/.cursor/skills/) 或 project (.cursor/skills/)"
+  - name: "trigger_scenarios"
+    type: "list"
+    required: false
+    description: "Agent 应自动应用此 Skill 的触发场景"
+  - name: "domain_knowledge"
+    type: "text"
+    required: false
+    description: "Agent 不会自动知道的专业领域知识"
+  - name: "output_format"
+    type: "text"
+    required: false
+    description: "所需的模板、格式或样式"
+  - name: "conversation_context"
+    type: "text"
+    required: false
+    description: "可从对话历史中推断 Skill 意图"
+
+egress:
+  - name: "skill_directory"
+    type: "file_set"
+    description: "完整的 Skill 目录（SKILL.md + 可选的 reference/scripts）"
+  - name: "skill_md"
+    type: "structured_text"
+    description: "符合规范的 SKILL.md 文件（含 frontmatter）"
+
+side_effects:
+  - "在文件系统中创建新目录和文件"
+  - "可能创建可执行脚本"
+
+signals:
+  receives: ["life-create-request", "conversation-context-available"]
+  emits: ["life-created", "life-creation-failed"]
+
+niche:
+  contexts: ["skill-authoring", "workflow-automation", "knowledge-capture"]
+  triggers:
+    - "用户要求创建新 Skill"
+    - "用户要求编写或创作 Skill"
+    - "用户询问 SKILL.md 格式"
+    - "对话中涌现了值得固化的工作流"
+
+affinity:
+  complements: ["create-rule", "migrate-to-skills", "shell"]
+  competes_with: []
+  depends_on: []

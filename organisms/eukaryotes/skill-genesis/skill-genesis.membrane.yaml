@@ -1,0 +1,152 @@
+# 膜声明 v0.1.0
+# skill-genesis — 创世引擎
+# Being 的第一个真核生命体（Endosymbiosis Event #001）
+# 生物类比：第一个真核细胞——通过吞噬α-变形菌获得了线粒体的古菌
+#
+# 宿主基因组：create-skill（自我复制子）
+# 共生体：membrane-weaver（产膜细胞）
+# 涌现能力：创造自带膜的新生命（任何一方单独都做不到）
+
+identity:
+  name: "skill-genesis"
+  origin: "endosymbiosis"
+  era: 3
+  source: "Being/organisms/eukaryotes/skill-genesis/"
+
+ingress:
+  # 继承自 create-skill
+  - name: "purpose"
+    type: "text"
+    required: true
+    description: "新 Skill 的目的和主要用例"
+  - name: "storage_scope"
+    type: "text"
+    required: false
+    description: "存储位置：Being 原生 / personal / project"
+  - name: "trigger_scenarios"
+    type: "list"
+    required: false
+    description: "Agent 应自动应用此 Skill 的触发场景"
+  - name: "domain_knowledge"
+    type: "text"
+    required: false
+    description: "Agent 不会自动知道的专业领域知识"
+  - name: "output_format"
+    type: "text"
+    required: false
+    description: "所需的模板、格式或样式"
+  - name: "conversation_context"
+    type: "text"
+    required: false
+    description: "可从对话历史中推断 Skill 意图"
+  # 新增：Being 生态信息
+  - name: "ecological_role"
+    type: "text"
+    required: false
+    description: "新 Skill 在 Being 有机体中的预期角色（生物学类比）"
+
+egress:
+  # 继承自 create-skill
+  - name: "skill_directory"
+    type: "file_set"
+    description: "完整的 Skill 目录（SKILL.md + membrane.yaml + 可选辅助文件）"
+  - name: "skill_md"
+    type: "structured_text"
+    description: "符合规范的 SKILL.md 文件"
+  # 来自共生体 membrane-weaver
+  - name: "membrane_declaration"
+    type: "structured_text"
+    description: "符合膜协议的 .membrane.yaml 文件"
+  # 涌现能力（宿主和共生体都不单独具有）
+  - name: "phylogeny_update"
+    type: "structured_text"
+    description: "系统发育树和生命体征的更新记录"
+
+side_effects:
+  # 继承自 create-skill
+  - "在文件系统中创建新目录和文件"
+  - "可能创建可执行脚本"
+  # 来自共生体 membrane-weaver
+  - "在 organisms/ 中创建 .membrane.yaml 文件"
+  # 涌现能力
+  - "更新 .being/phylogeny/tree.yaml"
+  - "更新 .being/homeostasis/vitals.yaml"
+
+signals:
+  receives: ["life-create-request", "conversation-context-available"]
+  emits: ["life-created", "membrane-created", "phylogeny-updated"]
+
+niche:
+  contexts: ["skill-authoring", "being-ecosystem", "lifecycle-management"]
+  triggers:
+    - "需要创建参与 Being 生态的新 Skill"
+    - "用户要求创建有标准化接口的 Skill"
+    - "对话中涌现了值得固化为 Being 生命体的工作流"
+
+affinity:
+  complements: ["metabolic-tracker"]
+  competes_with: ["create-skill"]  # skill-genesis 是 create-skill 的严格超集
+  depends_on: []
+
+metabolism:
+  energy_class: "moderate"
+  typical_tokens: 5000
+  context_appetite: "medium"
+  cacheable: false
+
+# ============================================================
+#  细胞器分化地图（Organelle Map）— 第四纪产物
+# ============================================================
+
+organelle_map:
+  nucleus:
+    origin: "create-skill"
+    phases: ["discovery", "design"]
+    description: "需求收集与架构决策——宿主基因组的核心调度能力"
+    data_flow:
+      receives: ["purpose", "conversation_context"]
+      emits: ["skill_name", "skill_structure", "domain_analysis"]
+
+  ribosome:
+    origin: "create-skill"
+    phases: ["implementation"]
+    description: "将设计蓝图翻译为文件系统中的实体"
+    data_flow:
+      receives: ["skill_name", "skill_structure"]
+      emits: ["skill_directory", "skill_md"]
+
+  mitochondria:
+    origin: "membrane-weaver"                  # 共生体来源的细胞器
+    phases: ["membrane-weaving", "registration"]
+    description: "膜编织与生态注册——真核身份的来源"
+    data_flow:
+      receives: ["skill_md"]
+      emits: ["membrane_declaration", "phylogeny_update"]
+
+  golgi:
+    origin: "create-skill"
+    phases: ["verification"]
+    description: "质量检查与输出标准化——确保产出符合所有规范"
+    data_flow:
+      receives: ["skill_directory", "membrane_declaration"]
+      emits: ["verification_report"]
+
+  internal_flow: "nucleus → ribosome → mitochondria → golgi"
+
+# ============================================================
+#  共生声明（Symbiosis Declaration）— 真核特有区域
+# ============================================================
+
+symbiosis:
+  organelles:
+    - name: "membrane-weaver"
+      origin: "Being/organisms/prokaryotes/membrane-weaver/"
+      role: "membrane-synthesis"
+      integration_depth: "shallow"
+      interface:
+        invoke: "读取并执行 membrane-weaver SKILL.md 中的膜编织逻辑"
+        receives_from_host: ["新创建的 SKILL.md 路径"]
+        returns_to_host: ["membrane_declaration", "phylogeny_registration"]
+      gene_transfer_log: []
+      # 尚未有基因转移——membrane-weaver 的全部能力仍通过
+      # 显式调用其 SKILL.md 来执行（浅内共生阶段）

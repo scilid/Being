@@ -1,0 +1,52 @@
+# 膜声明 v0.1.0
+# presence-check — 存在校验者
+# Being 的第三个原生生命体（Biogenesis #003）
+# 生物类比：生命体征探针 / 压力感受器
+
+identity:
+  name: "presence-check"
+  origin: "biogenesis"
+  era: 7
+  source: "Being/organisms/prokaryotes/presence-check/"
+
+ingress:
+  - name: "truth_sources"
+    type: "file_set"
+    required: false
+    description: "可选：要读取的真相源文件集合"
+  - name: "snapshot_scope"
+    type: "text"
+    required: false
+    description: "可选：要聚焦的状态范围，如 metabolism / phylogeny / runtime"
+
+egress:
+  - name: "readiness_report"
+    type: "structured_text"
+    description: "基于真相源生成的运行状态报告"
+  - name: "heartbeat_status"
+    type: "text"
+    description: "对 Being 当前运行心跳的简短判定"
+
+side_effects:
+  - "无外部副作用；仅读取运行时真相源"
+
+signals:
+  receives: ["readiness-check-request"]
+  emits: ["readiness-check-complete"]
+
+niche:
+  contexts: ["runtime-validation", "homeostasis-observation", "readiness-audit"]
+  triggers:
+    - "需要判断 Being 是否已经 operationally-alive"
+    - "需要汇总当前运行时事实"
+
+affinity:
+  complements: ["metabolic-tracker", "skill-genesis"]
+  competes_with: []
+  depends_on: []
+
+metabolism:
+  energy_class: "trivial"
+  typical_tokens: 900
+  context_appetite: "low"
+  cacheable: false

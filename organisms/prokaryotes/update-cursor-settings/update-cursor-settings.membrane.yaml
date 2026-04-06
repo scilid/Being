@@ -1,0 +1,49 @@
+# 膜声明 v0.1.0
+# update-cursor-settings — 渗透调节者
+# 生物类比：具有渗透调节能力的原核细胞（改变自身运行环境的参数）
+# 这个 Skill 的独特之处：它改变的是 Being 本身运行的环境
+
+identity:
+  name: "update-cursor-settings"
+  origin: "abiogenesis"
+  era: 0
+  source: "~/.cursor/skills-cursor/update-cursor-settings/"
+
+ingress:
+  - name: "setting_request"
+    type: "text"
+    required: true
+    description: "用户对编辑器设置的自然语言描述（如'字体大一点'）"
+  - name: "current_settings"
+    type: "config"
+    required: false
+    description: "当前 settings.json 的内容（会自动读取）"
+
+egress:
+  - name: "updated_settings"
+    type: "config"
+    description: "修改后的 settings.json"
+  - name: "change_summary"
+    type: "text"
+    description: "变更摘要和是否需要重启的提示"
+
+side_effects:
+  - "修改 Cursor/VSCode 的 settings.json"
+  - "可能需要重启编辑器才能生效"
+  - "影响所有后续的编辑器行为"
+
+signals:
+  receives: ["settings-change-request"]
+  emits: ["settings-updated", "restart-required"]
+
+niche:
+  contexts: ["editor-configuration", "developer-experience", "environment-tuning"]
+  triggers:
+    - "用户要求修改编辑器设置"
+    - "用户提到字体、主题、Tab 大小等偏好"
+    - "用户提到 settings.json"
+
+affinity:
+  complements: ["create-rule"]
+  competes_with: []
+  depends_on: []

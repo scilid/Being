@@ -1,0 +1,61 @@
+# 膜声明 v0.1.0
+# metabolic-tracker — 代谢感知者
+# Being 的第二个原生生命体（Biogenesis #002）
+# 生物类比：原始的代谢感知机制——让生命体"知道"自己消耗和产出了什么
+
+identity:
+  name: "metabolic-tracker"
+  origin: "biogenesis"
+  era: 2
+  source: "Being/organisms/prokaryotes/metabolic-tracker/"
+
+ingress:
+  - name: "skill_name"
+    type: "text"
+    required: true
+    description: "被观测的 Skill 名称"
+  - name: "execution_context"
+    type: "structured_text"
+    required: true
+    description: "Skill 执行的上下文（做了什么、用了什么输入、产出了什么）"
+  - name: "quality_score"
+    type: "number"
+    required: false
+    description: "产出质量评分（0-10），可由用户或 evaluator 提供"
+
+egress:
+  - name: "metabolism_record"
+    type: "structured_text"
+    description: "符合代谢协议的单次调用记录（YAML）"
+  - name: "aggregated_stats"
+    type: "structured_text"
+    description: "聚合统计摘要（仅在执行能力 B 时）"
+  - name: "comparison_report"
+    type: "structured_text"
+    description: "代谢对比报告（仅在执行能力 C 时）"
+
+side_effects:
+  - "在 .being/metabolism/ 中创建或追加 .log.yaml 文件"
+  - "在 .being/metabolism/ 中创建或更新 .stats.yaml 文件"
+
+signals:
+  receives: ["skill-execution-complete", "request-stats", "request-comparison", "life-created"]
+  emits: ["metabolism-recorded", "stats-generated", "efficiency-alert", "baseline-recorded"]
+
+niche:
+  contexts: ["skill-monitoring", "fitness-evaluation", "being-ecosystem"]
+  triggers:
+    - "某个 Skill 执行完毕后需要记录代谢"
+    - "需要查看某个 Skill 的代谢统计"
+    - "需要比较多个 Skill 的代谢效率"
+
+affinity:
+  complements: ["membrane-weaver"]  # 膜定义接口，代谢追踪性能
+  competes_with: []
+  depends_on: []
+
+metabolism:
+  energy_class: "light"
+  typical_tokens: 1500
+  context_appetite: "medium"
+  cacheable: false

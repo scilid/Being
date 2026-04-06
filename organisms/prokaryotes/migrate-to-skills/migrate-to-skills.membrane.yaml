@@ -1,0 +1,48 @@
+# 膜声明 v0.1.0
+# migrate-to-skills — 水平基因转移者
+# 生物类比：能进行水平基因转移/转化的原核细胞（自然感受态细胞）
+
+identity:
+  name: "migrate-to-skills"
+  origin: "abiogenesis"
+  era: 0
+  source: "~/.cursor/skills-cursor/migrate-to-skills/"
+
+ingress:
+  - name: "source_rules"
+    type: "file_set"
+    required: false
+    description: ".cursor/rules/*.mdc 中的 'Applied intelligently' 规则"
+  - name: "source_commands"
+    type: "file_set"
+    required: false
+    description: ".cursor/commands/*.md 中的斜杠命令"
+
+egress:
+  - name: "migrated_skills"
+    type: "file_set"
+    description: "转换后的 SKILL.md 文件集合"
+  - name: "migration_report"
+    type: "structured_text"
+    description: "迁移结果报告（原路径 → 新路径映射）"
+
+side_effects:
+  - "在 .cursor/skills/ 中创建新目录和 SKILL.md"
+  - "删除原始的 .mdc 和 .md 文件"
+  - "可通过逆操作撤销"
+
+signals:
+  receives: ["migrate-request"]
+  emits: ["migration-complete", "migration-undone"]
+
+niche:
+  contexts: ["skill-migration", "format-conversion", "system-upgrade"]
+  triggers:
+    - "用户要求将规则或命令迁移为 Skill"
+    - "用户要求转换 .mdc 规则"
+    - "用户要求整合命令到 skills 目录"
+
+affinity:
+  complements: ["create-skill"]
+  competes_with: []
+  depends_on: []

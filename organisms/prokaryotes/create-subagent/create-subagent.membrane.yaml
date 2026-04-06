@@ -1,0 +1,54 @@
+# 膜声明 v0.1.0
+# create-subagent — 芽孢形成者
+# 生物类比：能产生芽孢（专门化休眠体）的原核细胞
+
+identity:
+  name: "create-subagent"
+  origin: "abiogenesis"
+  era: 0
+  source: "~/.cursor/skills-cursor/create-subagent/"
+
+ingress:
+  - name: "agent_purpose"
+    type: "text"
+    required: true
+    description: "Subagent 的专业领域和核心任务"
+  - name: "scope"
+    type: "text"
+    required: false
+    description: "项目级 (.cursor/agents/) 或用户级 (~/.cursor/agents/)"
+  - name: "system_prompt_guidance"
+    type: "text"
+    required: false
+    description: "对 Subagent 行为和工作流的具体指导"
+  - name: "conversation_context"
+    type: "text"
+    required: false
+    description: "可从对话中推断 Subagent 意图"
+
+egress:
+  - name: "agent_file"
+    type: "file_content"
+    description: "包含 frontmatter 和 system prompt 的 .md 文件"
+  - name: "agent_config"
+    type: "config"
+    description: "Subagent 的 name 和 description 配置"
+
+side_effects:
+  - "在 .cursor/agents/ 或 ~/.cursor/agents/ 中创建 .md 文件"
+
+signals:
+  receives: ["create-agent-request"]
+  emits: ["agent-created"]
+
+niche:
+  contexts: ["agent-specialization", "task-delegation", "workflow-isolation"]
+  triggers:
+    - "用户要求创建自定义 Subagent"
+    - "需要专门化的 AI 助手"
+    - "需要隔离特定领域的上下文"
+
+affinity:
+  complements: ["create-skill", "create-rule"]
+  competes_with: []
+  depends_on: []

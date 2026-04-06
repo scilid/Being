@@ -1,0 +1,6 @@
+skill: "create-skill"
+receptors:
+  - signal: "life-create-request"
+    action: "创建新的 Skill 骨架"
+  - signal: "conversation-context-available"
+    action: "从对话上下文推断 Skill 创建意图"

@@ -1,0 +1,53 @@
+# 膜声明 v0.1.0
+# babysit — 趋化循环者
+# 生物类比：具有趋化行为的原核细胞（感知-运动-反馈闭环）
+# 这是现有 Skill 中唯一具有自主循环行为的，是神经系统的种子
+
+identity:
+  name: "babysit"
+  origin: "abiogenesis"
+  era: 0
+  source: "~/.cursor/skills-cursor/babysit/"
+
+ingress:
+  - name: "pr_reference"
+    type: "text"
+    required: true
+    description: "Pull Request 的引用（URL 或编号）"
+  - name: "pr_state"
+    type: "structured_text"
+    required: false
+    description: "PR 当前状态（评论、CI、冲突）"
+
+egress:
+  - name: "pr_status"
+    type: "structured_text"
+    description: "PR 最终状态报告"
+  - name: "actions_taken"
+    type: "list"
+    description: "所有已执行的修复操作列表"
+  - name: "merge_readiness"
+    type: "boolean"
+    description: "PR 是否已达到可合并状态"
+
+side_effects:
+  - "推送代码修复到远程分支"
+  - "回复 PR 评论"
+  - "可能解决 merge conflicts"
+  - "可能重新触发 CI"
+
+signals:
+  receives: ["pr-comment-added", "ci-failed", "merge-conflict-detected"]
+  emits: ["pr-ready-to-merge", "pr-needs-human-review", "ci-fixed"]
+
+niche:
+  contexts: ["pull-request-management", "ci-cd", "code-review-response"]
+  triggers:
+    - "用户要求照看一个 PR"
+    - "PR 有新评论需要处理"
+    - "CI 失败需要修复"
+
+affinity:
+  complements: ["shell"]
+  competes_with: []
+  depends_on: []

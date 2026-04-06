@@ -1,0 +1,12 @@
+signal:
+  type: neurotransmitter
+  name: readiness-check-request
+  emitter: skill-genesis
+  target: presence-check
+  timestamp: '2026-04-06T00:28:20Z'
+  payload:
+    scope: runtime
+    reason: Run the first automated self-check loop
+  consumed_by:
+  - presence-check
+  consumed_at: '2026-04-06T00:28:28.181155Z'

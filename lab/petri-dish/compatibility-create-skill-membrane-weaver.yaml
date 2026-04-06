@@ -1,0 +1,113 @@
+# ============================================================
+#  兼容性评估报告
+#  Being 历史上的第一次兼容性分析
+#  日期：2026-04-05
+# ============================================================
+
+assessment:
+  host: "create-skill"
+  prey: "membrane-weaver"
+  date: "2026-04-05"
+  analyst: "Being 创始会话"
+
+  # ---- 营养兼容性 ----
+  trophic_compatibility:
+    host_egress_to_prey_ingress:
+      - host_egress: "skill_directory (file_set)"
+        prey_ingress: "target_skill_path (file_path)"
+        match_quality: "strong"
+        note: >-
+          create-skill 产出完整的 Skill 目录（含 SKILL.md），
+          membrane-weaver 需要 SKILL.md 的文件路径。
+          file_set 包含 file_path，语义兼容。
+          这意味着：create-skill 创造生命后，membrane-weaver 可以直接为新生命编织膜。
+
+    prey_egress_to_host_ingress:
+      - prey_egress: "membrane_declaration (structured_text)"
+        host_ingress: "domain_knowledge (text)"
+        match_quality: "moderate"
+        note: >-
+          membrane-weaver 产出膜声明（structured_text），
+          create-skill 接受 domain_knowledge（text）。
+          structured_text 是 text 的子类型，兼容。
+          这意味着：膜协议知识可以内化为 create-skill 的领域知识，
+          使其在创造 Skill 时就自动考虑膜结构。
+
+    verdict: "full"
+    summary: >-
+      双向营养兼容。正向流：create-skill 创造 → membrane-weaver 编膜。
+      反向流：membrane-weaver 的膜知识 → create-skill 的领域知识。
+      这是一个天然的互利共生配对。
+
+  # ---- 功能互补性 ----
+  functional_complementarity:
+    host_lacks: >-
+      create-skill 能创造符合格式规范的 SKILL.md，但对 Being 生态一无所知。
+      它创造的 Skill 没有膜——在 Being 生态中是"不可见的"前生命实体。
+    prey_provides: >-
+      membrane-weaver 精通膜协议，能分析任何 Skill 的 SKILL.md 并生成
+      标准化膜声明。它能让"前生命"跨越到"原核生物"。
+    overlap: >-
+      几乎为零。create-skill 专注于 Skill 创作流程和最佳实践，
+      membrane-weaver 专注于膜分析和接口声明。两者知识域不重叠。
+    verdict: "complementary"
+    summary: >-
+      完美互补。宿主是"造物主但不懂生态"，猎物是"懂生态但不能创造"。
+      合并后的实体将是"能创造生态中可见的生命"的造物主。
+
+  # ---- 信号兼容性 ----
+  signal_compatibility:
+    host_emits_prey_receives:
+      - host_signal: "life-created"
+        prey_signal: "weave-membrane-request"
+        note: "create-skill 创造完 Skill 后发出的信号，恰好是 membrane-weaver 的触发信号"
+
+    prey_emits_host_receives:
+      - prey_signal: "membrane-created"
+        host_signal: "conversation-context-available"
+        note: "膜创建完成的信号可作为 create-skill 的上下文补充"
+
+    verdict: "connected"
+    summary: >-
+      信号链路通畅。create-skill 的 life-created 信号可直接
+      触发 membrane-weaver 的 weave-membrane-request。
+      形成自然的因果链：创造 → 编膜。
+
+  # ---- 风险评估 ----
+  risks:
+    - risk: "膜知识过快内化导致 create-skill 变得过于臃肿"
+      severity: "low"
+      mitigation: "初始阶段保持浅内共生，膜编织仍委派给 membrane-weaver 执行"
+
+    - risk: "membrane-weaver 丧失独立性后，无法单独为非 create-skill 路径创建的 Skill 编膜"
+      severity: "medium"
+      mitigation: >-
+        保持 membrane-weaver 的独立 SKILL.md 可用。
+        即使被内化，原始 membrane-weaver 仍可被独立调用（线粒体 DNA 仍能表达部分蛋白质）。
+
+  # ---- 预期收益 ----
+  expected_benefits:
+    capability_gain: >-
+      复合体能一步完成"创造 Skill + 编织膜 + 注册到系统发育树"——
+      这是三个独立步骤的融合，只有复合体能自动完成。
+    efficiency_gain: >-
+      消除了"先创建 Skill，再手动调用 membrane-weaver"的中间步骤。
+      预计节省 30-40% 的 token 消耗（不需要重复读取 Skill 内容）。
+    ecological_significance: >-
+      复合体将成为 Being 的"产膜生殖系统"——
+      每一个新生命从诞生之刻起就带有膜，直接进入原核级。
+      这类似于真核生物的核膜在细胞分裂时自动传递给子代。
+
+  # ---- 最终裁定 ----
+  overall_verdict: "proceed"
+  rationale: >-
+    三项兼容性评估全部为最高等级（full / complementary / connected）。
+    功能互补性完美，风险可控。
+    这是 Being 历史上最理想的第一次内共生候选配对。
+    建议立即进入浅内共生阶段。
+
+  proposed_name: "skill-genesis"
+  proposed_role: >-
+    Being 的"创世引擎"——能创造自带膜的新生命体。
+    每一个从 skill-genesis 诞生的 Skill，
+    从出生第一刻起就是 Being 生态中的可见个体。

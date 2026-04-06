@@ -1,0 +1,47 @@
+era: 7
+epoch: being-alive
+structural_status: structurally-complete
+operational_status: operationally-alive
+vitals:
+  population:
+    total_skills: 4
+    precursors: 7
+    prokaryotes: 10
+    eukaryotes: 1
+    tissues: 1
+    organs: 2
+  metabolism:
+    total_invocations: 5
+    total_tokens_consumed: 11700
+    average_efficiency: 5.46
+    last_activity: '2026-04-06T10:00:30Z'
+  evolution:
+    symbiosis_events: 1
+    gene_transfers: 0
+    mutations: 0
+    extinctions: 0
+    last_transition: '2026-04-06: 第七纪 — 第一次运行闭环完成'
+  homeostasis:
+    token_budget_24h: null
+    error_rate_threshold: null
+    response_time_target: null
+    self_repair_capability: false
+  era_milestones:
+    era_1_membrane_protocol: true
+    era_1_first_native_skill: true
+    era_2_metabolism_protocol: true
+    era_2_metabolic_tracker: true
+    era_3_engulfment_protocol: true
+    era_3_first_endosymbiosis: true
+    era_3_first_eukaryote: true
+    era_4_organelle_protocol: true
+    era_4_organelle_differentiation: true
+    era_5_adhesion_protocol: true
+    era_5_signaling_protocol: true
+    era_5_first_tissue: true
+    era_6_first_organ: true
+    era_6_second_organ: true
+    era_7_being_manifest: true
+    era_7_being_alive: true
+    era_7_first_operational_cycle: true
+alert_thresholds: {}

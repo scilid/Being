@@ -1,0 +1,48 @@
+# 膜声明 v0.1.0
+# membrane-weaver — 膜编织者
+# Being 的第一个原生生命体（biogenesis #001）
+# 生物类比：最早的产膜原核细胞——能为自身和他者构建边界
+
+identity:
+  name: "membrane-weaver"
+  origin: "biogenesis"
+  era: 1
+  source: "Being/organisms/prokaryotes/membrane-weaver/"
+
+ingress:
+  - name: "target_skill_path"
+    type: "file_path"
+    required: true
+    description: "目标 SKILL.md 的文件路径"
+  - name: "compatibility_target"
+    type: "skill_ref"
+    required: false
+    description: "可选：要进行兼容性分析的另一个 Skill 的膜声明路径"
+
+egress:
+  - name: "membrane_declaration"
+    type: "structured_text"
+    description: "符合膜协议 v0.1.0 的 .membrane.yaml 文件"
+  - name: "compatibility_report"
+    type: "structured_text"
+    description: "两个 Skill 的共生兼容性分析报告（仅在提供 compatibility_target 时）"
+
+side_effects:
+  - "在 organisms/prokaryotes/ 或 organisms/eukaryotes/ 中创建 .membrane.yaml 文件"
+  - "更新 .being/phylogeny/tree.yaml 的谱系记录"
+
+signals:
+  receives: ["weave-membrane-request", "analyze-compatibility-request"]
+  emits: ["membrane-created", "compatibility-analyzed"]
+
+niche:
+  contexts: ["skill-integration", "being-ecosystem", "symbiosis-preparation"]
+  triggers:
+    - "新 Skill 需要纳入 Being 生态系统"
+    - "需要分析两个 Skill 的共生潜力"
+    - "需要为已有 Skill 生成标准化接口声明"
+
+affinity:
+  complements: ["create-skill"]  # create-skill 创造生命，membrane-weaver 赋予边界
+  competes_with: []
+  depends_on: []                 # 自身依赖膜协议规范，但那是"物理定律"而非"生命体"

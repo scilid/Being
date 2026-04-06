@@ -1,0 +1,21 @@
+- invocation_id: "2026-04-06T10:00:30Z-metabolic-tracker-001"
+  timestamp: "2026-04-06T10:00:30Z"
+  skill: "metabolic-tracker"
+  energy:
+    tokens_in: 700
+    tokens_out: 300
+    tokens_total: 1200
+    tool_calls: 1
+    wall_time_ms: 3000
+  nutrition:
+    context_items: ["life-created signal", "presence-check metadata"]
+    context_tokens: 500
+  products:
+    primary: "baseline metabolism record for first operational cycle"
+    byproducts: ["operational heartbeat evidence"]
+    waste: []
+  outcome:
+    success: true
+    quality: 7
+    efficiency: 5.83
+    notes: "首次记录 Being 的运行时基线。"

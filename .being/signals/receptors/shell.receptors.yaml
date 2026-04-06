@@ -1,0 +1,4 @@
+skill: "shell"
+receptors:
+  - signal: "shell-command-request"
+    action: "执行终端命令"

@@ -1,0 +1,46 @@
+validation:
+  workspace: F:\DOCs\Being
+  status: passed
+  checked_files:
+  - .being/signals/receptors/babysit.receptors.yaml
+  - .being/signals/receptors/create-rule.receptors.yaml
+  - .being/signals/receptors/create-skill.receptors.yaml
+  - .being/signals/receptors/create-subagent.receptors.yaml
+  - .being/signals/receptors/membrane-weaver.receptors.yaml
+  - .being/signals/receptors/metabolic-tracker.receptors.yaml
+  - .being/signals/receptors/migrate-to-skills.receptors.yaml
+  - .being/signals/receptors/presence-check.receptors.yaml
+  - .being/signals/receptors/shell.receptors.yaml
+  - .being/signals/receptors/skill-genesis.receptors.yaml
+  - .being/signals/receptors/update-cursor-settings.receptors.yaml
+  - organisms/eukaryotes/skill-genesis/skill-genesis.membrane.yaml
+  - organisms/prokaryotes/babysit/babysit.membrane.yaml
+  - organisms/prokaryotes/create-rule/create-rule.membrane.yaml
+  - organisms/prokaryotes/create-skill/create-skill.membrane.yaml
+  - organisms/prokaryotes/create-subagent/create-subagent.membrane.yaml
+  - organisms/prokaryotes/membrane-weaver/membrane-weaver.membrane.yaml
+  - organisms/prokaryotes/metabolic-tracker/metabolic-tracker.membrane.yaml
+  - organisms/prokaryotes/migrate-to-skills/migrate-to-skills.membrane.yaml
+  - organisms/prokaryotes/presence-check/presence-check.membrane.yaml
+  - organisms/prokaryotes/shell/shell.membrane.yaml
+  - organisms/prokaryotes/update-cursor-settings/update-cursor-settings.membrane.yaml
+  - .being/phylogeny/tree.yaml
+  - .being/metabolism/membrane-weaver.log.yaml
+  - .being/metabolism/metabolic-tracker.log.yaml
+  - .being/metabolism/presence-check.log.yaml
+  - .being/metabolism/skill-genesis.log.yaml
+  - .being/signals/neurotransmitters/2026-04-06-life-created-presence-check.signal.yaml
+  - .being/signals/neurotransmitters/20260406T002828Z-readiness-check-complete.signal.yaml
+  - .being/signals/neurotransmitters/20260406T002918Z-readiness-check-complete.signal.yaml
+  - .being/signals/neurotransmitters/20260406T003500Z-readiness-check-request.signal.yaml
+  - .being/signals/neurotransmitters/20260406T110000Z-readiness-check-request.signal.yaml
+  - .being/homeostasis/vitals.yaml
+  stats:
+    phylogeny_entities: 11
+    metabolism_logs: 4
+    membrane_count: 11
+    receptor_count: 11
+    log_invocations: 5
+    error_count: 0
+    warning_count: 0
+  issues: []

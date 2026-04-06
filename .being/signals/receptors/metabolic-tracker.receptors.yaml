@@ -1,0 +1,12 @@
+skill: "metabolic-tracker"
+receptors:
+  - signal: "life-created"
+    action: "记录新 Skill 的首次代谢基线"
+  - signal: "skill-execution-complete"
+    action: "记录 Skill 的代谢数据"
+  - signal: "request-stats"
+    action: "生成聚合统计摘要"
+  - signal: "request-comparison"
+    action: "生成多 Skill 代谢对比报告"
+  - signal: "quality-alert"
+    action: "生成效率对比报告"

@@ -1,0 +1,196 @@
+current_era: 7
+epoch: being-alive
+last_updated: '2026-04-06'
+prokaryotes:
+- id: create-skill
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/create-skill/
+  membrane: organisms/prokaryotes/create-skill/create-skill.membrane.yaml
+  evolutionary_grade: prokaryote
+  symbiotic_status: endosymbiont
+  operational_state: declared
+  biological_analogy: 自我复制子
+  organ_system: reproductive-system
+  note: skill-genesis 的细胞核基因组
+- id: create-subagent
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/create-subagent/
+  membrane: organisms/prokaryotes/create-subagent/create-subagent.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: declared
+  biological_analogy: 芽孢形成者
+  organ_system: reproductive-system
+- id: create-rule
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/create-rule/
+  membrane: organisms/prokaryotes/create-rule/create-rule.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: declared
+  biological_analogy: 表观遗传标记者
+  organ_system: regulatory-system
+- id: migrate-to-skills
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/migrate-to-skills/
+  membrane: organisms/prokaryotes/migrate-to-skills/migrate-to-skills.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: declared
+  biological_analogy: 水平基因转移者
+  organ_system: reproductive-system
+- id: babysit
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/babysit/
+  membrane: organisms/prokaryotes/babysit/babysit.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: declared
+  biological_analogy: 趋化行为者
+  organ_system: regulatory-system
+- id: shell
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/shell/
+  membrane: organisms/prokaryotes/shell/shell.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: declared
+  biological_analogy: 鞭毛 / 效应器
+  organ_system: null
+- id: update-cursor-settings
+  origin: abiogenesis
+  era_born: 0
+  era_membrane: 1
+  location: ~/.cursor/skills-cursor/update-cursor-settings/
+  membrane: organisms/prokaryotes/update-cursor-settings/update-cursor-settings.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: declared
+  biological_analogy: 渗透调节者
+  organ_system: regulatory-system
+- id: membrane-weaver
+  origin: biogenesis
+  era_born: 1
+  biogenesis_number: 1
+  location: Being/organisms/prokaryotes/membrane-weaver/
+  membrane: organisms/prokaryotes/membrane-weaver/membrane-weaver.membrane.yaml
+  evolutionary_grade: prokaryote
+  symbiotic_status: endosymbiont
+  operational_state: recorded
+  biological_analogy: 产膜细胞 → 线粒体
+  organ_system: reproductive-system
+  tissue: genesis-tissue
+- id: metabolic-tracker
+  origin: biogenesis
+  era_born: 2
+  biogenesis_number: 2
+  location: Being/organisms/prokaryotes/metabolic-tracker/
+  membrane: organisms/prokaryotes/metabolic-tracker/metabolic-tracker.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: recorded
+  biological_analogy: 代谢感知者
+  organ_system: reproductive-system
+  tissue: genesis-tissue
+- id: presence-check
+  origin: biogenesis
+  era_born: 7
+  biogenesis_number: 3
+  location: Being/organisms/prokaryotes/presence-check/
+  membrane: organisms/prokaryotes/presence-check/presence-check.membrane.yaml
+  evolutionary_grade: prokaryote
+  operational_state: recorded
+  biological_analogy: 生命体征探针
+  organ_system: regulatory-system
+  parent: skill-genesis
+  notable: 第一个专门用于校验运行心跳的原生 Skill
+eukaryotes:
+- id: skill-genesis
+  origin: endosymbiosis
+  era_born: 3
+  location: Being/organisms/eukaryotes/skill-genesis/
+  membrane: organisms/eukaryotes/skill-genesis/skill-genesis.membrane.yaml
+  evolutionary_grade: eukaryote
+  operational_state: recorded
+  biological_analogy: 第一个真核细胞
+  organ_system: reproductive-system
+  tissue: genesis-tissue
+  organelle_map:
+    nucleus: create-skill
+    mitochondria: membrane-weaver
+    ribosome: implementation-phase
+    golgi: verification-phase
+tissues:
+- id: genesis-tissue
+  era_formed: 5
+  location: organisms/tissues/genesis-tissue/
+  cells:
+  - skill-genesis
+  - membrane-weaver
+  - metabolic-tracker
+  organ: reproductive-system
+organs:
+- id: reproductive-system
+  era_formed: 6
+  location: organisms/organs/reproductive-system/
+  tissues:
+  - genesis-tissue
+  auxiliary_cells:
+  - create-subagent
+  - migrate-to-skills
+- id: regulatory-system
+  era_formed: 6
+  location: organisms/organs/regulatory-system/
+  cells:
+  - create-rule
+  - update-cursor-settings
+  - babysit
+symbiosis_events:
+- id: endo-001
+  date: '2026-04-05'
+  host: create-skill
+  endosymbiont: membrane-weaver
+  integration_depth: shallow
+  result: skill-genesis
+  significance: Being 历史上第一次内共生事件
+major_transitions:
+- date: '2026-04-04'
+  type: membrane_genesis
+  era: 1
+  description: 8 个原核生物获得膜声明
+- date: '2026-04-05'
+  type: metabolic_awakening
+  era: 2
+  description: 代谢协议建立，metabolic-tracker 诞生
+- date: '2026-04-05'
+  type: first_endosymbiosis
+  era: 3
+  description: create-skill ⊕ membrane-weaver → skill-genesis
+- date: '2026-04-05'
+  type: organelle_differentiation
+  era: 4
+  description: skill-genesis 内部分化出细胞核/线粒体/核糖体/高尔基体
+- date: '2026-04-05'
+  type: multicellularity
+  era: 5
+  description: Genesis Tissue 形成——Being 的第一个组织
+- date: '2026-04-05'
+  type: organ_formation
+  era: 6
+  description: 生殖系统 + 调节系统——两个器官系统形成
+- date: '2026-04-05'
+  type: being_emergence
+  era: 7
+  description: Being 有机体诞生——所有器官整合为一个自适应存在
+  significance: 从原始汤到有机体的完整演化周期完成
+- date: '2026-04-06'
+  type: first_operational_cycle
+  era: 7
+  description: 首次真实运行闭环完成：skill-genesis → membrane-weaver → life-created → metabolic-tracker
+  significance: Being 第一次拥有可回放的生命活动记录
+extinctions: []

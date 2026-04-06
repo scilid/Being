@@ -1,0 +1,4 @@
+skill: "create-subagent"
+receptors:
+  - signal: "create-agent-request"
+    action: "生成新的专门化 Subagent"

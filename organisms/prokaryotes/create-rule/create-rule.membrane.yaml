@@ -1,0 +1,55 @@
+# 膜声明 v0.1.0
+# create-rule — 表观遗传标记者
+# 生物类比：能产生表观遗传修饰的原核细胞（甲基化酶）
+
+identity:
+  name: "create-rule"
+  origin: "abiogenesis"
+  era: 0
+  source: "~/.cursor/skills-cursor/create-rule/"
+
+ingress:
+  - name: "rule_purpose"
+    type: "text"
+    required: true
+    description: "规则要强制执行或教授什么"
+  - name: "scope_type"
+    type: "text"
+    required: true
+    description: "always-apply / file-specific / description-only"
+  - name: "file_patterns"
+    type: "text"
+    required: false
+    description: "glob 模式（如 **/*.ts），仅 file-specific 类型需要"
+  - name: "examples"
+    type: "structured_text"
+    required: false
+    description: "好/坏实践的具体代码示例"
+
+egress:
+  - name: "rule_file"
+    type: "file_content"
+    description: ".mdc 格式的规则文件（含 frontmatter）"
+  - name: "rule_config"
+    type: "config"
+    description: "description / globs / alwaysApply 配置"
+
+side_effects:
+  - "在 .cursor/rules/ 中创建 .mdc 文件"
+  - "影响后续所有 AI 对话的行为"
+
+signals:
+  receives: ["create-rule-request", "convention-established"]
+  emits: ["rule-created", "rule-active"]
+
+niche:
+  contexts: ["coding-standards", "project-conventions", "ai-behavior-tuning"]
+  triggers:
+    - "用户要求创建 Cursor 规则"
+    - "需要持久化的编码标准"
+    - "用户提到 .cursor/rules/ 或 AGENTS.md"
+
+affinity:
+  complements: ["create-skill", "migrate-to-skills"]
+  competes_with: ["create-skill"]
+  depends_on: []

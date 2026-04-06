@@ -1,0 +1,8 @@
+skill: "babysit"
+receptors:
+  - signal: "pr-comment-added"
+    action: "处理新的 PR 评论"
+  - signal: "ci-failed"
+    action: "诊断并修复 CI 故障"
+  - signal: "merge-conflict-detected"
+    action: "处理合并冲突"

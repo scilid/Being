@@ -1,0 +1,13 @@
+signal:
+  type: "neurotransmitter"
+  name: "life-created"
+  emitter: "skill-genesis"
+  target: "metabolic-tracker"
+  timestamp: "2026-04-06T10:00:20Z"
+  payload:
+    new_skill: "presence-check"
+    location: "organisms/prokaryotes/presence-check/"
+    membrane: "organisms/prokaryotes/presence-check/presence-check.membrane.yaml"
+  consumed_by:
+    - "metabolic-tracker"
+  consumed_at: "2026-04-06T10:00:30Z"

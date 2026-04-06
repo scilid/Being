@@ -1,0 +1,6 @@
+skill: "skill-genesis"
+receptors:
+  - signal: "life-create-request"
+    action: "启动完整的创世流程（创建+编膜+注册）"
+  - signal: "conversation-context-available"
+    action: "从对话上下文推断是否需要创建新 Skill"

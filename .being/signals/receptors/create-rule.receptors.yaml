@@ -1,0 +1,6 @@
+skill: "create-rule"
+receptors:
+  - signal: "create-rule-request"
+    action: "创建新的持久规则"
+  - signal: "convention-established"
+    action: "将已稳定的规范固化为规则"

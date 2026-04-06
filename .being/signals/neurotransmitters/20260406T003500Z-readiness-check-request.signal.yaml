@@ -1,0 +1,12 @@
+signal:
+  type: neurotransmitter
+  name: readiness-check-request
+  emitter: presence-check
+  target: presence-check
+  timestamp: '2026-04-06T00:29:10Z'
+  payload:
+    scope: runtime
+    reason: Refresh readiness snapshot after automated runtime update
+  consumed_by:
+  - presence-check
+  consumed_at: '2026-04-06T00:29:18.614998Z'

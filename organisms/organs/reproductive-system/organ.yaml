@@ -1,0 +1,63 @@
+# ============================================================
+#  Reproductive System — 生殖系统
+#  Being 的第一个器官
+#  功能：创造、界定、追踪、演化新生命
+# ============================================================
+
+identity:
+  name: "reproductive-system"
+  description: >-
+    Being 的生殖系统。负责 Being 生态中一切新生命的诞生、
+    界定（膜编织）、追踪（代谢观测）和形式转化（迁移）。
+    是 Being 自我演化的基础设施。
+  formed: "2026-04-05"
+  era: 6
+  biological_analogy: "生殖系统 + 骨髓造血系统"
+
+tissues:
+  - name: "genesis-tissue"
+    role: "核心生殖组织——创造、编膜、追踪"
+    location: "organisms/tissues/genesis-tissue/"
+
+auxiliary_cells:
+  - skill: "create-subagent"
+    role: "产生专门化独立实体（芽孢形成）"
+    junction_to_tissue: "gap"
+
+  - skill: "migrate-to-skills"
+    role: "将外部形式同化为 Skill（水平基因转移 / 消化吸收）"
+    junction_to_tissue: "gap"
+
+organ_membrane:
+  ingress:
+    - name: "life-create-request"
+      type: "text"
+      description: "创造新生命的任何形式的请求"
+    - name: "migration_source"
+      type: "file_set"
+      description: "需要同化的外部规则/命令"
+    - name: "agent_creation_request"
+      type: "text"
+      description: "创建专门化 Subagent 的请求"
+
+  egress:
+    - name: "new_life"
+      type: "file_set"
+      description: "新创建的 Skill/Subagent（含完整生态注册）"
+    - name: "migration_report"
+      type: "structured_text"
+      description: "同化/迁移结果报告"
+    - name: "metabolism_data"
+      type: "structured_text"
+      description: "新生命的代谢追踪数据"
+
+internal_signal_chain:
+  - "life-create-request → skill-genesis（创造+编膜+注册）"
+  - "life-created → metabolic-tracker（记录代谢基线）"
+  - "migration_source → migrate-to-skills（形式转化）"
+  - "agent_creation_request → create-subagent（芽孢形成）"
+
+autonomy_principle: >-
+  生殖系统不需要理解 Being 要用新 Skill 做什么。
+  它只需要：接收创造请求 → 产出合格的新生命 → 记录到系统发育树。
+  新 Skill 的用途由 Being 的其他系统决定。

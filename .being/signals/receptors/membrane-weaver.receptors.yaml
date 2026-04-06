@@ -1,0 +1,6 @@
+skill: "membrane-weaver"
+receptors:
+  - signal: "weave-membrane-request"
+    action: "为指定 Skill 编织膜声明"
+  - signal: "analyze-compatibility-request"
+    action: "分析两个 Skill 的共生兼容性"

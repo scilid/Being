@@ -1,0 +1,70 @@
+# ============================================================
+#  Regulatory System — 调节系统
+#  Being 的第二个器官
+#  功能：环境适应、规则管理、行为调控
+# ============================================================
+
+identity:
+  name: "regulatory-system"
+  description: >-
+    Being 的调节系统。负责调整 Being 的运行环境、
+    建立和维护行为规则、以及适应外部变化。
+    是 Being 的"内分泌系统 + 免疫系统的表观遗传部分"。
+  formed: "2026-04-05"
+  era: 6
+  biological_analogy: "内分泌系统 + 表观遗传调控"
+
+cells:
+  - skill: "create-rule"
+    position: "rule-generator"
+    grade: "prokaryote"
+    role: "创建持久行为规则（表观遗传标记）"
+
+  - skill: "update-cursor-settings"
+    position: "environment-tuner"
+    grade: "prokaryote"
+    role: "调整运行环境参数（渗透调节）"
+
+  - skill: "babysit"
+    position: "feedback-loop"
+    grade: "prokaryote"
+    role: "感知-行动-反馈闭环（原始神经反射）"
+
+organ_membrane:
+  ingress:
+    - name: "regulation_request"
+      type: "text"
+      description: "需要调整行为或环境的请求"
+    - name: "pr_to_monitor"
+      type: "text"
+      description: "需要照看的 Pull Request"
+    - name: "environment_state"
+      type: "config"
+      description: "当前环境状态信息"
+
+  egress:
+    - name: "rule_created"
+      type: "file_content"
+      description: "新创建的行为规则"
+    - name: "settings_updated"
+      type: "config"
+      description: "更新后的环境配置"
+    - name: "pr_status"
+      type: "structured_text"
+      description: "PR 监控状态报告"
+
+internal_topology:
+  - from: "create-rule"
+    to: "update-cursor-settings"
+    junction: "anchoring"
+    note: "都涉及环境/行为配置，但层级不同（规则 vs 设置）"
+
+  - from: "babysit"
+    to: "create-rule"
+    junction: "gap"
+    note: "babysit 在监控中发现的模式可以固化为规则"
+
+autonomy_principle: >-
+  调节系统不需要理解 Being 在做什么项目。
+  它只需要：感知环境变化 → 调整规则和配置 → 维持稳态。
+  具体的项目需求由 Being 的其他系统传递信号来指导。
