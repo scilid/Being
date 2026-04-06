@@ -4,7 +4,7 @@ Created on 2026-04-06 to mark the first completed manual runtime loop.
 
 Involved skills:
 
-- `skill-genesis`
+- `life-weaver`
 - `membrane-weaver`
 - `metabolic-tracker`
 - newborn `presence-check`

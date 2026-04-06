@@ -102,7 +102,7 @@ operational_status: "operationally-alive"
 
 - `skill_created`
 - `skill_born`
-- `genesis-complete`
+- `origin-complete`
 - `life_creation_request`（作为上游请求名）
 
 这些名称分布在不同层：
@@ -353,11 +353,11 @@ lifecycle_state: "recorded"
 
 ---
 
-## 发现 A8：`skill-genesis` 已经是事实上的编排器，但定义仍偏神话中心
+## 发现 A8：`life-weaver` 已经是事实上的编排器，但定义仍偏神话中心
 
 ### 现象
 
-当前 `skill-genesis` 实际承担：
+当前 `life-weaver` 实际承担：
 
 1. 创建 Skill
 2. 调用 membrane 能力
@@ -376,7 +376,7 @@ lifecycle_state: "recorded"
 
 ### 建议
 
-把 `skill-genesis` 的工程角色明确写成：
+把 `life-weaver` 的工程角色明确写成：
 
 > 创建流程编排器（creation orchestrator）
 

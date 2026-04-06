@@ -1,19 +1,19 @@
 ---
-name: skill-genesis
+name: life-weaver
 description: >-
   Create new Skills that are born alive in the Being ecosystem — complete with
   membrane declarations and phylogeny registration. Use when creating any new
   Skill that should participate in the Being ecosystem, or when you want to
   create a Skill with standardized interfaces from the start.
 ---
-# Skill Genesis
+# Life Weaver
 
 Being 的第一个真核生命体。
 
 宿主基因组：`create-skill`（Skill 创造能力）
 共生体：`membrane-weaver`（膜编织能力）
 
-**独特能力**：创造自带膜的新生命。从 skill-genesis 诞生的 Skill，从第一刻起就是 Being 生态中可见的原核生物——它们不需要事后补充膜声明。
+**独特能力**：创造自带膜的新生命。从 life-weaver 诞生的 Skill，从第一刻起就是 Being 生态中可见的原核生物——它们不需要事后补充膜声明。
 
 这是 create-skill 和 membrane-weaver 各自都做不到的事。
 
@@ -99,7 +99,7 @@ Being 的第一个真核生命体。
      biological_analogy: "{从对话或分析中推断}"
      notable: "{简述独特之处}"
      potential_role: "{在 Being 有机体中的潜在角色}"
-     parent: "skill-genesis"
+      parent: "life-weaver"
    ```
 3. 更新 `.being/homeostasis/vitals.yaml` 中的种群计数
 
@@ -124,7 +124,7 @@ Being 的第一个真核生命体。
 
 ## 输出清单
 
-一次完整的 skill-genesis 执行应产出：
+一次完整的 life-weaver 执行应产出：
 
 ```
 {skill-name}/

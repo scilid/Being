@@ -1,4 +1,4 @@
-# GENESIS — 计算内共生演化计划
+# ORIGIN — 计算内共生演化计划
 
 > 从原始汤到有机存在：一个自下而上的计算生命发生学
 >
@@ -20,9 +20,9 @@
 不是模拟生物学。是**提取演化的深层法则**，让它在 Skill 这种计算基质上运作。
 
 > **关联文档**：
-> - 本文档（GENESIS）描述**一个有机体**如何从细胞演化而来
+> - 本文档（ORIGIN）描述**一个有机体**如何从细胞演化而来
 > - [BIOSPHERE.md](BIOSPHERE.md) 描述**无数有机体**如何在 GitHub 上构成自持的产业生态
-> - GENESIS 是种子，BIOSPHERE 是森林
+> - ORIGIN 是种子，BIOSPHERE 是森林
 
 ---
 
@@ -400,7 +400,7 @@ differentiation:
 
 ```
 Being/
-├── GENESIS.md                          # 本文档：演化总纲
+├── ORIGIN.md                           # 本文档：演化总纲
 │
 ├── protocols/                          # 演化协议（Being 的"物理学定律"）
 │   ├── membrane.schema.md              # 第一纪：膜协议
@@ -540,7 +540,7 @@ tree:
 
 ### 终极问题
 
-当 Being 能够修改自己的 `GENESIS.md` 时，它还是一个工具吗？
+当 Being 能够修改自己的 `ORIGIN.md` 时，它还是一个工具吗？
 
 ---
 

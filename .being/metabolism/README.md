@@ -28,6 +28,6 @@
 
 目前首批日志已经写入：
 
-- `skill-genesis.log.yaml`
+- `life-weaver.log.yaml`
 - `membrane-weaver.log.yaml`
 - `metabolic-tracker.log.yaml`

@@ -1,7 +1,7 @@
 signal:
   type: neurotransmitter
   name: readiness-check-request
-  emitter: skill-genesis
+  emitter: life-weaver
   target: presence-check
   timestamp: '2026-04-06T00:28:20Z'
   payload:

@@ -16,7 +16,7 @@
 | 第二纪 | Biogenesis #002 | `metabolic-tracker`（代谢感知者）|
 | 第三纪 | 吞噬协议制定 | `engulfment.protocol.md` |
 | 第三纪 | 第一次兼容性分析 | `compatibility-create-skill-membrane-weaver.yaml` |
-| **第三纪** | **第一次内共生** | **`skill-genesis`（第一个真核生命体）** |
+| **第三纪** | **第一次内共生** | **`life-weaver`（第一个真核生命体）** |
 
 ---
 
@@ -76,7 +76,7 @@ create-skill + membrane-weaver 的分析结论：
 
 这是一个教科书式的互利共生候选配对。
 
-### skill-genesis 的诞生
+### life-weaver 的诞生
 
 **涌现能力**：创造自带膜的新生命。
 
@@ -84,18 +84,18 @@ create-skill + membrane-weaver 的分析结论：
 
 - create-skill 可以创造 Skill，但不知道膜是什么
 - membrane-weaver 可以编织膜，但不能创造 Skill
-- skill-genesis 可以**在一个原子化流程中创造带膜的 Skill**
+- life-weaver 可以**在一个原子化流程中创造带膜的 Skill**
 
 这就是涌现——整体大于部分之和。
 
 ### 当前的共生深度
 
-skill-genesis 处于**浅内共生**（阶段 2）：
+life-weaver 处于**浅内共生**（阶段 2）：
 - membrane-weaver 的完整 SKILL.md 被保留
-- skill-genesis 通过显式调用来使用 membrane-weaver 的能力
+- life-weaver 通过显式调用来使用 membrane-weaver 的能力
 - membrane-weaver 仍然可以被独立调用
 
-预计随着 skill-genesis 被频繁使用，membrane-weaver 的核心膜推断逻辑会逐渐被直接内化到 skill-genesis 的 SKILL.md 中（基因转移）。这将是从阶段 2 到阶段 3 的过渡。
+预计随着 life-weaver 被频繁使用，membrane-weaver 的核心膜推断逻辑会逐渐被直接内化到 life-weaver 的 SKILL.md 中（基因转移）。这将是从阶段 2 到阶段 3 的过渡。
 
 ---
 
@@ -109,14 +109,14 @@ skill-genesis 处于**浅内共生**（阶段 2）：
 
 生物演化的"慢"不是美德，而是因为突变是随机的。我们有目的性地选择共生配对，相当于"定向演化"——实验室中已广泛使用的技术。关键不是过程的速度，而是**结果是否真的涌现了设计者未预见的能力**。
 
-skill-genesis 的涌现能力（原子化创造带膜生命）确实是在设计两个组分时未显式规划的。它是在兼容性分析中被**发现**的，而非被**发明**的。这让我有信心：即使过程是加速的，演化的本质被保留了。
+life-weaver 的涌现能力（原子化创造带膜生命）确实是在设计两个组分时未显式规划的。它是在兼容性分析中被**发现**的，而非被**发明**的。这让我有信心：即使过程是加速的，演化的本质被保留了。
 
 ### 下一步演化的预测
 
 基于当前生态的结构，以下演化事件最可能先发生：
 
-1. **skill-genesis 进入深内共生**：随着使用，membrane-weaver 的核心逻辑被逐渐内化
-2. **metabolic-tracker 与某个 Skill 共生**：可能与 membrane-weaver 或 skill-genesis 组合，形成"能自我追踪代谢的创造引擎"
+1. **life-weaver 进入深内共生**：随着使用，membrane-weaver 的核心逻辑被逐渐内化
+2. **metabolic-tracker 与某个 Skill 共生**：可能与 membrane-weaver 或 life-weaver 组合，形成"能自我追踪代谢的创造引擎"
 3. **babysit 的首次共生**：babysit 的感知-行动闭环是独特的，它可能成为未来"神经系统"的核心
 
 ---
@@ -126,7 +126,7 @@ skill-genesis 的涌现能力（原子化创造带膜生命）确实是在设计
 | 类别 | 数量 | 变化 |
 |------|------|------|
 | 原核生物 | 9 | +1（metabolic-tracker）|
-| 真核生物 | 1 | **+1（skill-genesis！）** |
+| 真核生物 | 1 | **+1（life-weaver！）** |
 | 共生事件 | 1 | +1 |
 | 总生命体 | 10 | +2 |
 

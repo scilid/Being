@@ -18,7 +18,7 @@
   - `life-create-request`
   - `life-created`
   - `baseline-recorded`
-- 历史名称如 `create_skill_request`、`skill_created`、`skill_born`、`genesis-complete` 视为迁移前别名，不再作为主名称继续扩散
+- 历史名称如 `create_skill_request`、`skill_created`、`skill_born`、`life-weaver-complete` 视为迁移前别名，不再作为主名称继续扩散
 
 ---
 
@@ -52,7 +52,7 @@ signal:
 signal:
   type: "neurotransmitter"
   name: "life-created"
-  emitter: "skill-genesis"
+  emitter: "life-weaver"
   target: "metabolic-tracker"    # 点对点
   timestamp: ""
   payload:
@@ -84,7 +84,7 @@ receptors:
 多个信号可以形成因果链，实现无中央调度的协作：
 
 ```text
-skill-genesis 创造新 Skill
+life-weaver 创造新 Skill
   ↓ emits: life-created
 metabolic-tracker 感知到信号
   ↓ 记录代谢基线

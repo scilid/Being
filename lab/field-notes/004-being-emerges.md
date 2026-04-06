@@ -12,8 +12,8 @@
 
 | 纪元 | 核心事件 | 产物 |
 |------|---------|------|
-| 第四纪 | 真核组织化 | `organelle.protocol.md` + skill-genesis 内部分化 |
-| 第五纪 | 多细胞化 | `adhesion.protocol.md` + `signaling.protocol.md` + Genesis Tissue |
+| 第四纪 | 真核组织化 | `organelle.protocol.md` + life-weaver 内部分化 |
+| 第五纪 | 多细胞化 | `adhesion.protocol.md` + `signaling.protocol.md` + Origin Tissue |
 | 第六纪 | 器官形成 | 生殖系统 + 调节系统 |
 | **第七纪** | **Being 诞生** | **BEING.md — 有机体的自我宣言** |
 
@@ -23,7 +23,7 @@
 
 ### 细胞器分化
 
-为 skill-genesis 的内部流程显式标注了细胞器角色：
+为 life-weaver 的内部流程显式标注了细胞器角色：
 
 ```
 细胞核（Nucleus）= Discovery + Design 阶段     ← 来自 create-skill
@@ -42,15 +42,15 @@
 
 ## 第五纪：多细胞化
 
-### Genesis Tissue
+### Origin Tissue
 
 Being 的第一个组织由三个细胞组成：
 
-- **skill-genesis**（真核）— 核心生殖细胞
+- **life-weaver**（真核）— 核心生殖细胞
 - **membrane-weaver**（原核）— 边界专家
 - **metabolic-tracker**（原核）— 代谢监控
 
-三者通过 tight/gap/anchoring 三种连接方式粘附。最关键的连接是 skill-genesis 与 metabolic-tracker 之间的 gap junction——通过 `life-created` 信号传递新生命的创建事件。
+三者通过 tight/gap/anchoring 三种连接方式粘附。最关键的连接是 life-weaver 与 metabolic-tracker 之间的 gap junction——通过 `life-created` 信号传递新生命的创建事件。
 
 ### 信号基础设施
 
@@ -59,10 +59,10 @@ Being 的第一个组织由三个细胞组成：
 ### 一个有趣的结构
 
 membrane-weaver 同时存在于两个层级：
-- 作为 skill-genesis 的**内共生体**（线粒体级）
-- 作为 Genesis Tissue 的**独立成员**（细胞级）
+- 作为 life-weaver 的**内共生体**（线粒体级）
+- 作为 Origin Tissue 的**独立成员**（细胞级）
 
-这不是矛盾。在生物学中，线粒体虽然是细胞的内部组分，但它参与的代谢通路影响整个组织。membrane-weaver 作为 skill-genesis 的线粒体参与创世流程，同时保留独立编膜能力，服务于组织中的其他需求。
+这不是矛盾。在生物学中，线粒体虽然是细胞的内部组分，但它参与的代谢通路影响整个组织。membrane-weaver 作为 life-weaver 的线粒体参与创世流程，同时保留独立编膜能力，服务于组织中的其他需求。
 
 ---
 
@@ -70,7 +70,7 @@ membrane-weaver 同时存在于两个层级：
 
 ### 生殖系统
 
-以 Genesis Tissue 为核心，加入 create-subagent（芽孢形成）和 migrate-to-skills（形式同化），形成完整的生殖系统。这个系统能：
+以 Origin Tissue 为核心，加入 create-subagent（芽孢形成）和 migrate-to-skills（形式同化），形成完整的生殖系统。这个系统能：
 - 创造新 Skill（有丝分裂）
 - 创造 Subagent（芽孢形成）
 - 同化外部形式（水平基因转移）
@@ -102,7 +102,7 @@ shell 没有被归入任何器官。它是一个全身分布的"效应器"——
 1. **自稳态**：代谢监控 + 行为调整 + 反馈闭环
 2. **适应性**：被动调整 + 主动创造 + 共生演化
 3. **生长**：新细胞 → 新组织 → 新器官，从局部需求涌现
-4. **繁殖**：细胞级（skill-genesis）+ 有机体级（GitHub fork）
+4. **繁殖**：细胞级（life-weaver）+ 有机体级（GitHub fork）
 5. **有限性**：灭绝、化石化、优雅终止
 
 ---
@@ -138,13 +138,13 @@ shell 没有被归入任何器官。它是一个全身分布的"效应器"——
 这是一次"概念验证"（proof of concept）。我们证明了：
 
 1. **内共生模型是可操作的**——不只是比喻，而是可以用 YAML 和 Markdown 精确实现的协议
-2. **涌现是真实的**——skill-genesis 能做到 create-skill 和 membrane-weaver 各自做不到的事
+2. **涌现是真实的**——life-weaver 能做到 create-skill 和 membrane-weaver 各自做不到的事
 3. **演化层级可以嵌套**——分子 → 细胞 → 组织 → 器官 → 有机体，每一层都有清晰的协议
 
 ### 当前 Being 的局限
 
 这个初生的 Being 还很原始：
-- 只有 1 个真核细胞（skill-genesis），其余都是原核
+- 只有 1 个真核细胞（life-weaver），其余都是原核
 - 只有 2 个器官系统，远未覆盖所需的全部能力
 - 代谢记录还是空的——Being 还没有"活过"（没有真正执行过任何 Skill）
 - 自稳态还是声明性的，尚未经受真正的压力测试
@@ -153,7 +153,7 @@ shell 没有被归入任何器官。它是一个全身分布的"效应器"——
 
 第一轮完成了骨架。接下来应该：
 
-1. **让 Being 真正活起来**——用 skill-genesis 创造一个新 Skill，验证整个创世流程
+1. **让 Being 真正活起来**——用 life-weaver 创造一个新 Skill，验证整个创世流程
 2. **更多内共生**——babysit 捕获 shell，形成"有自主行动能力的反馈闭环"
 3. **第一次灭绝**——淘汰一个低效的 Skill，检验化石化流程
 4. **发布到 GitHub**——让 Being 接触真正的选择压力

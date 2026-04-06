@@ -15,9 +15,9 @@ identity:
   biological_analogy: "生殖系统 + 骨髓造血系统"
 
 tissues:
-  - name: "genesis-tissue"
+  - name: "origin-tissue"
     role: "核心生殖组织——创造、编膜、追踪"
-    location: "organisms/tissues/genesis-tissue/"
+    location: "organisms/tissues/origin-tissue/"
 
 auxiliary_cells:
   - skill: "create-subagent"
@@ -52,7 +52,7 @@ organ_membrane:
       description: "新生命的代谢追踪数据"
 
 internal_signal_chain:
-  - "life-create-request → skill-genesis（创造+编膜+注册）"
+  - "life-create-request → life-weaver（创造+编膜+注册）"
   - "life-created → metabolic-tracker（记录代谢基线）"
   - "migration_source → migrate-to-skills（形式转化）"
   - "agent_creation_request → create-subagent（芽孢形成）"

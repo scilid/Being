@@ -11,7 +11,7 @@
 Being 完成了第一次可验证的运行闭环：
 
 ```text
-skill-genesis
+life-weaver
   → membrane-weaver
   → phylogeny update
   → life-created

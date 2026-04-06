@@ -11,9 +11,9 @@ validation:
   - .being/signals/receptors/migrate-to-skills.receptors.yaml
   - .being/signals/receptors/presence-check.receptors.yaml
   - .being/signals/receptors/shell.receptors.yaml
-  - .being/signals/receptors/skill-genesis.receptors.yaml
+  - .being/signals/receptors/life-weaver.receptors.yaml
   - .being/signals/receptors/update-cursor-settings.receptors.yaml
-  - organisms/eukaryotes/skill-genesis/skill-genesis.membrane.yaml
+  - organisms/eukaryotes/life-weaver/life-weaver.membrane.yaml
   - organisms/prokaryotes/babysit/babysit.membrane.yaml
   - organisms/prokaryotes/create-rule/create-rule.membrane.yaml
   - organisms/prokaryotes/create-skill/create-skill.membrane.yaml
@@ -28,7 +28,7 @@ validation:
   - .being/metabolism/membrane-weaver.log.yaml
   - .being/metabolism/metabolic-tracker.log.yaml
   - .being/metabolism/presence-check.log.yaml
-  - .being/metabolism/skill-genesis.log.yaml
+  - .being/metabolism/life-weaver.log.yaml
   - .being/signals/neurotransmitters/2026-04-06-life-created-presence-check.signal.yaml
   - .being/signals/neurotransmitters/20260406T002828Z-readiness-check-complete.signal.yaml
   - .being/signals/neurotransmitters/20260406T002918Z-readiness-check-complete.signal.yaml

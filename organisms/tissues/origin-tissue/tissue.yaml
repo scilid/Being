@@ -1,20 +1,20 @@
 # ============================================================
-#  Genesis Tissue — Being 的第一个组织
+#  Origin Tissue — Being 的第一个组织
 #  生物类比：生殖上皮组织（产生新细胞的组织）
 #  功能：创造、界定、追踪新生命
 # ============================================================
 
 identity:
-  name: "genesis-tissue"
+  name: "origin-tissue"
   description: >-
-    Being 的创世组织——负责创造新 Skill、为其编织膜、追踪代谢。
+    Being 的起源组织——负责创造新 Skill、为其编织膜、追踪代谢。
     这是 Being 的"干细胞龛"：所有新生命从这里诞生。
   formed: "2026-04-05"
   era: 5
   biological_analogy: "生殖上皮 / 干细胞龛（stem cell niche）"
 
 cells:
-  - skill: "skill-genesis"
+  - skill: "life-weaver"
     position: "core-generator"
     grade: "eukaryote"
     role: "创造自带膜的新 Skill"
@@ -22,8 +22,8 @@ cells:
   - skill: "membrane-weaver"
     position: "boundary-specialist"
     grade: "prokaryote"
-    role: "独立膜编织（为非 skill-genesis 路径创建的 Skill 服务）"
-    note: "既是 skill-genesis 的内共生体，也保留组织中的独立地位"
+    role: "独立膜编织（为非 life-weaver 路径创建的 Skill 服务）"
+    note: "既是 life-weaver 的内共生体，也保留组织中的独立地位"
 
   - skill: "metabolic-tracker"
     position: "metabolism-monitor"
@@ -54,15 +54,15 @@ collective_membrane:
       description: "独立编织的膜声明"
 
 internal_topology:
-  - from: "skill-genesis"
+  - from: "life-weaver"
     to: "metabolic-tracker"
     junction: "gap"
     signal: "life-created → metabolic-tracker 记录新 Skill 的首次代谢基线"
 
-  - from: "skill-genesis"
+  - from: "life-weaver"
     to: "membrane-weaver"
     junction: "tight"
-    note: "内共生关系——membrane-weaver 是 skill-genesis 的线粒体"
+    note: "内共生关系——membrane-weaver 是 life-weaver 的线粒体"
 
   - from: "metabolic-tracker"
     to: "membrane-weaver"

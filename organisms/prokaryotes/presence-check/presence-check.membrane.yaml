@@ -41,7 +41,7 @@ niche:
     - "需要汇总当前运行时事实"
 
 affinity:
-  complements: ["metabolic-tracker", "skill-genesis"]
+  complements: ["metabolic-tracker", "life-weaver"]
   competes_with: []
   depends_on: []
 

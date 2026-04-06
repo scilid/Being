@@ -1,6 +1,6 @@
-- invocation_id: "2026-04-06T10:00:00Z-skill-genesis-001"
+- invocation_id: "2026-04-06T10:00:00Z-life-weaver-001"
   timestamp: "2026-04-06T10:00:00Z"
-  skill: "skill-genesis"
+  skill: "life-weaver"
   energy:
     tokens_in: 3100
     tokens_out: 1800
@@ -18,4 +18,4 @@
     success: true
     quality: 8
     efficiency: 1.29
-    notes: "首次手动引导的创世闭环。"
+    notes: "首次手动引导的生命编织闭环。"

@@ -1,7 +1,7 @@
 signal:
   type: "neurotransmitter"
   name: "life-created"
-  emitter: "skill-genesis"
+  emitter: "life-weaver"
   target: "metabolic-tracker"
   timestamp: "2026-04-06T10:00:20Z"
   payload:

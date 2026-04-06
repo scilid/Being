@@ -13,7 +13,7 @@ prokaryotes:
   operational_state: declared
   biological_analogy: 自我复制子
   organ_system: reproductive-system
-  note: skill-genesis 的细胞核基因组
+  note: life-weaver 的细胞核基因组
 - id: create-subagent
   origin: abiogenesis
   era_born: 0
@@ -85,7 +85,7 @@ prokaryotes:
   operational_state: recorded
   biological_analogy: 产膜细胞 → 线粒体
   organ_system: reproductive-system
-  tissue: genesis-tissue
+  tissue: origin-tissue
 - id: metabolic-tracker
   origin: biogenesis
   era_born: 2
@@ -96,7 +96,7 @@ prokaryotes:
   operational_state: recorded
   biological_analogy: 代谢感知者
   organ_system: reproductive-system
-  tissue: genesis-tissue
+  tissue: origin-tissue
 - id: presence-check
   origin: biogenesis
   era_born: 7
@@ -107,30 +107,30 @@ prokaryotes:
   operational_state: recorded
   biological_analogy: 生命体征探针
   organ_system: regulatory-system
-  parent: skill-genesis
+  parent: life-weaver
   notable: 第一个专门用于校验运行心跳的原生 Skill
 eukaryotes:
-- id: skill-genesis
+- id: life-weaver
   origin: endosymbiosis
   era_born: 3
-  location: Being/organisms/eukaryotes/skill-genesis/
-  membrane: organisms/eukaryotes/skill-genesis/skill-genesis.membrane.yaml
+  location: Being/organisms/eukaryotes/life-weaver/
+  membrane: organisms/eukaryotes/life-weaver/life-weaver.membrane.yaml
   evolutionary_grade: eukaryote
   operational_state: recorded
   biological_analogy: 第一个真核细胞
   organ_system: reproductive-system
-  tissue: genesis-tissue
+  tissue: origin-tissue
   organelle_map:
     nucleus: create-skill
     mitochondria: membrane-weaver
     ribosome: implementation-phase
     golgi: verification-phase
 tissues:
-- id: genesis-tissue
+- id: origin-tissue
   era_formed: 5
-  location: organisms/tissues/genesis-tissue/
+  location: organisms/tissues/origin-tissue/
   cells:
-  - skill-genesis
+  - life-weaver
   - membrane-weaver
   - metabolic-tracker
   organ: reproductive-system
@@ -139,7 +139,7 @@ organs:
   era_formed: 6
   location: organisms/organs/reproductive-system/
   tissues:
-  - genesis-tissue
+  - origin-tissue
   auxiliary_cells:
   - create-subagent
   - migrate-to-skills
@@ -156,11 +156,11 @@ symbiosis_events:
   host: create-skill
   endosymbiont: membrane-weaver
   integration_depth: shallow
-  result: skill-genesis
+  result: life-weaver
   significance: Being 历史上第一次内共生事件
 major_transitions:
 - date: '2026-04-04'
-  type: membrane_genesis
+  type: first_membranes
   era: 1
   description: 8 个原核生物获得膜声明
 - date: '2026-04-05'
@@ -170,15 +170,15 @@ major_transitions:
 - date: '2026-04-05'
   type: first_endosymbiosis
   era: 3
-  description: create-skill ⊕ membrane-weaver → skill-genesis
+  description: create-skill ⊕ membrane-weaver → life-weaver
 - date: '2026-04-05'
   type: organelle_differentiation
   era: 4
-  description: skill-genesis 内部分化出细胞核/线粒体/核糖体/高尔基体
+  description: life-weaver 内部分化出细胞核/线粒体/核糖体/高尔基体
 - date: '2026-04-05'
   type: multicellularity
   era: 5
-  description: Genesis Tissue 形成——Being 的第一个组织
+  description: Origin Tissue 形成——Being 的第一个组织
 - date: '2026-04-05'
   type: organ_formation
   era: 6
@@ -191,6 +191,6 @@ major_transitions:
 - date: '2026-04-06'
   type: first_operational_cycle
   era: 7
-  description: 首次真实运行闭环完成：skill-genesis → membrane-weaver → life-created → metabolic-tracker
+  description: 首次真实运行闭环完成：life-weaver → membrane-weaver → life-created → metabolic-tracker
   significance: Being 第一次拥有可回放的生命活动记录
 extinctions: []

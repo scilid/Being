@@ -1,6 +1,6 @@
 # BIOSPHERE — 计算生物圈设计
 
-> GENESIS 描述了一个有机体如何从细胞演化而来。
+> ORIGIN 描述了一个有机体如何从细胞演化而来。
 > BIOSPHERE 描述了无数有机体如何构成一个自持的生态系统。
 >
 > 创建：2026-04-04
@@ -9,7 +9,7 @@
 
 ## 〇、核心洞察
 
-GENESIS 的隐含假设是：一个 Being 由一个人培育。
+ORIGIN 的隐含假设是：一个 Being 由一个人培育。
 
 但如果放到 GitHub 上，情况完全不同：
 
@@ -23,7 +23,7 @@ GENESIS 的隐含假设是：一个 Being 由一个人培育。
 
 关键转变：
 
-| GENESIS 视角 | BIOSPHERE 视角 |
+| ORIGIN 视角 | BIOSPHERE 视角 |
 |---|---|
 | 一个 Being 的内部演化 | 全球 Skill 种群的生态演化 |
 | 创造者 = 园丁 | 创造者 = 生态系统中的物种 |
@@ -458,9 +458,9 @@ web-fullstack-being:
 
 ---
 
-## 七、对 GENESIS 协议的修正
+## 七、对 ORIGIN 协议的修正
 
-BIOSPHERE 视角要求 GENESIS 中的协议做以下调整：
+BIOSPHERE 视角要求 ORIGIN（见 [ORIGIN.md](ORIGIN.md)）中的协议做以下调整：
 
 ### 7.1 膜协议扩展
 
@@ -513,7 +513,7 @@ entries:
 
 ### Phase A：标准先行（现在）
 
-1. 完成 GENESIS Phase 0-2（建立内部演化机制）
+1. 完成 ORIGIN Phase 0-2（建立内部演化机制）
 2. 发布膜协议 v1.0 和 being.yaml 规范
 3. 将 Being 仓库本身作为第一个 `being-*` 参考实现
 
@@ -583,5 +583,5 @@ entries:
 
 ---
 
-*GENESIS 是一颗种子。*
+*ORIGIN 是一颗种子。*
 *BIOSPHERE 是它要长成的森林。*

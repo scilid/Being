@@ -269,7 +269,7 @@ recorded
 
 - `skill_created`
 - `skill_born`
-- `genesis-complete`
+- `life-weaver-complete`
 
 三者若表达同一事件，应收敛为一个标准事件名，另两个仅保留为兼容别名或移除。
 
@@ -338,7 +338,7 @@ recorded
 MVP 只要求一条真实链路跑通：
 
 ```text
-skill-genesis
+life-weaver
   → membrane-weaver
   → phylogeny update
   → signal emit
@@ -348,7 +348,7 @@ skill-genesis
 
 ### 10.1 链路步骤
 
-1. `skill-genesis` 接收创建请求
+1. `life-weaver` 接收创建请求
 2. 产出新的 `SKILL.md`
 3. `membrane-weaver` 为该 Skill 生成膜声明
 4. 系统写入 `tree.yaml`

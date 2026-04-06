@@ -1,5 +1,5 @@
 # 膜声明 v0.1.0
-# skill-genesis — 创世引擎
+# life-weaver — 生命编织者
 # Being 的第一个真核生命体（Endosymbiosis Event #001）
 # 生物类比：第一个真核细胞——通过吞噬α-变形菌获得了线粒体的古菌
 #
@@ -8,10 +8,10 @@
 # 涌现能力：创造自带膜的新生命（任何一方单独都做不到）
 
 identity:
-  name: "skill-genesis"
+  name: "life-weaver"
   origin: "endosymbiosis"
   era: 3
-  source: "Being/organisms/eukaryotes/skill-genesis/"
+  source: "Being/organisms/eukaryotes/life-weaver/"
 
 ingress:
   # 继承自 create-skill
@@ -85,7 +85,7 @@ niche:
 
 affinity:
   complements: ["metabolic-tracker"]
-  competes_with: ["create-skill"]  # skill-genesis 是 create-skill 的严格超集
+  competes_with: ["create-skill"]  # life-weaver 是 create-skill 的严格超集
   depends_on: []
 
 metabolism:

@@ -49,7 +49,7 @@
 
 ### 新协议：being-manifest.schema.md
 
-定义了 `being.yaml` 的完整 schema。这是 GENESIS 中没有预见到的——因为 GENESIS 假设只有一个 Being，不需要"名片"。
+定义了 `being.yaml` 的完整 schema。这是 ORIGIN 中没有预见到的——因为 ORIGIN 假设只有一个 Being，不需要"名片"。
 
 ### 版本兼容规则
 
@@ -74,7 +74,7 @@
 ## 当前文档体系
 
 ```
-GENESIS.md         — 有机体的演化纲领（种子）
+ORIGIN.md          — 有机体的演化纲领（种子）
 BIOSPHERE.md       — 生态系统的设计蓝图（森林）
 protocols/
 ├── membrane.schema.md         — 膜协议 v0.1.0（已扩展 distribution 区）
@@ -83,7 +83,7 @@ protocols/
 
 ## 下一步
 
-继续 GENESIS 的 Phase 1（代谢协议），但设计时要考虑 BIOSPHERE 的需求——代谢数据需要能被注册表聚合为全局适应度分数。
+继续 ORIGIN 的 Phase 1（代谢协议），但设计时要考虑 BIOSPHERE 的需求——代谢数据需要能被注册表聚合为全局适应度分数。
 
 ---
 
